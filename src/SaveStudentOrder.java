@@ -2,13 +2,28 @@ import domain.Address;
 import domain.Adult;
 import domain.Child;
 import domain.StudentOrder;
+import org.postgresql.Driver;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.time.LocalDate;
 
 public class SaveStudentOrder
 {
-    public static void main(String[] args) {
-        StudentOrder s = buildStudentOrder(10);
+    public static void main(String[] args) throws Exception {
+        //Class.forName("org.postgresql.Driver");
+        Connection con = DriverManager.getConnection(
+                "jdbc:postgresql://localhost:5432/jc_student",
+                "postgres", "polina");
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM jc_street");
+        while (rs.next()) {
+            System.out.println(rs.getLong(1) + " : " + rs.getString(2));
+        }
+
+//        StudentOrder s = buildStudentOrder(10);
 //        StudentOrder so = new StudentOrder();
 //        long ans = saveStudentOrder(so);
 //        System.out.println(ans);
