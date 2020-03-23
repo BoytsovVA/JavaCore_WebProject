@@ -1,13 +1,14 @@
 package validator.register;
 
-import domain.CityRegisterCheckerResponse;
+import domain.register.CityRegisterResponse;
 import domain.Person;
 import exception.CityRegisterException;
-import validator.register.CityRegisterChecker;
+import exception.TransportException;
 
 public class RealCityRegisterChecker implements CityRegisterChecker {
 
-    public CityRegisterCheckerResponse checkPerson(Person person) throws CityRegisterException {
+    public CityRegisterResponse checkPerson(Person person)
+            throws CityRegisterException, TransportException {
         return null;
     }
 }

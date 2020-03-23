@@ -1,9 +1,11 @@
 package validator.register;
 
-import domain.CityRegisterCheckerResponse;
+import domain.register.CityRegisterResponse;
 import domain.Person;
 import exception.CityRegisterException;
+import exception.TransportException;
 
 public interface CityRegisterChecker {
-    CityRegisterCheckerResponse checkPerson(Person person) throws CityRegisterException;
+    CityRegisterResponse checkPerson(Person person)
+            throws CityRegisterException, TransportException;
 }
