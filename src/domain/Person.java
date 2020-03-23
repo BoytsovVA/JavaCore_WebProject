@@ -1,5 +1,7 @@
 package domain;
 
+import domain.Address;
+
 import java.time.LocalDate;
 
 public abstract class Person {
