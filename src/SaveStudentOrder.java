@@ -40,10 +40,15 @@ public class SaveStudentOrder
 //            System.out.println(c.getAreaId() + ": " + c.getAreaName());
 //        }
 
-        StudentOrder s = buildStudentOrder(10);
+//        StudentOrder s = buildStudentOrder(10);
         StudentOrderDao dao = new StudentDaoImpl();
-        Long id = dao.saveStudentOrder(s);
-        System.out.println(id);
+//        Long id = dao.saveStudentOrder(s);
+//        System.out.println(id);
+
+        List<StudentOrder> soList = dao.getStudentOrder();
+        for (StudentOrder so : soList) {
+            System.out.println(so.getStudentOrderId());
+        }
         //StudentOrder so = new StudentOrder();
 //        long ans = saveStudentOrder(so);
 //        System.out.println(ans);
