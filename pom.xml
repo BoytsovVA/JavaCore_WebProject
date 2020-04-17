@@ -8,12 +8,39 @@
     <artifactId>JavaCore</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <slf4f.version>1.7.25</slf4f.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.12</version>
         </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4f.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4f.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
 
